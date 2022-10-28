@@ -16,7 +16,7 @@ const Footer = () => {
         <Typography
           fontSize="18px"
           fontWeight={300}
-        //   lineHeight="30px"
+          //   lineHeight="30px"
           style={{ marginBottom: '2rem' }}
         >
           HNG Internship 9 Frontend Task

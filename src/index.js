@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 // import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -7,9 +7,11 @@ import App from './components/App';
 
 // const theme = createTheme({});
 
-createRoot(document.getElementById('root')).render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    ,
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

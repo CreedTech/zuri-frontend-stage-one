@@ -1,13 +1,16 @@
 import React from 'react';
 
 //mui components
-import { Avatar, Grid, Typography } from '@mui/material';
+import { Avatar, Grid, Typography, Tooltip, tooltipClasses } from '@mui/material';
 
 import useStyles from './styles';
+import { styled } from '@mui/material/styles';
 import { CameraAltOutlined } from '@mui/icons-material';
+import profileImg from '../../assets/image/default-img.png'
+import share from '../../assets/svg/share-default.svg';
 
 const headerAvatar = {
-  marginTop: '40%',
+  marginTop: '30%',
   height: '88px',
   width: '88px',
   '@media (min-width:1200px)': {
@@ -16,11 +19,23 @@ const headerAvatar = {
   },
 };
 
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
+
 const Header = () => {
   const classes = useStyles();
 
   return (
-    <Grid
+    <>
+      <Grid
       container
       spacing={1}
       direction="column"
@@ -32,7 +47,7 @@ const Header = () => {
         <Avatar
           id="profile__img"
           className={classes.avatar}
-          src={`https://media.michaelangrivera.com/michaelangrivera-links/avatar.png`}
+          src={profileImg}
           sx={{
             ...headerAvatar,
           }}
@@ -45,9 +60,10 @@ const Header = () => {
             color: 'white',
           }}
         />
+        
       </Grid>
 
-      <Grid item style={{ marginBottom: '50px' }}>
+      <Grid item style={{ marginBottom: '30px' }}>
         <Typography
           className={classes.headerTitle}
           id="twitter"
@@ -56,15 +72,27 @@ const Header = () => {
         <Typography
           className={classes.headerTitle}
           id="slack"
-          style={{
-            display: 'none',
-          }}
+          // style={{
+          //   display: 'none',
+          // }}
           variant="h3"
+
+          hidden
         >
           lazyProgrammer
         </Typography>
       </Grid>
+      <div className={classes.share}>
+          <BootstrapTooltip title="share" placement="left">
+            <picture>
+              <source srcSet={share}/>
+            <img src={share} alt="share" style={{border:'1px dotted lightgray',borderRadius:'50%', padding:'10px'}}/>
+            </picture>
+            {/* <img src={default_dot} alt="dot" /> */}
+        </BootstrapTooltip>
+        </div>
     </Grid>
+    </>
   );
 };
 

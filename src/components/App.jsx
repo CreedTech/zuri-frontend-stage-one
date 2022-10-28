@@ -5,7 +5,7 @@ import {ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import theme from '../assets/css/theme';
-import {Header, Menu} from '.';
+import {Header, Menu, Footer} from '.';
 
 function App() {
   return (
@@ -16,7 +16,9 @@ function App() {
 
       <Header/>
 
-      <Menu/>
+        <Menu />
+        
+        <Footer/>
 
     </ThemeProvider>
 

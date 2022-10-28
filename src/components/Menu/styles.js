@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuMainText: {
     color: 'black',
+    fontSize:'2rem'
   },
   image: {
     width: '19px',

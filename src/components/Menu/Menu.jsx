@@ -24,7 +24,7 @@ const Menu = () => {
       >
         <Grid item>
             <List sx={commonBorderColor}>
-              <Typography variant="h6" className={classes.menuMainText}>
+              <Typography variant="h6" className={classes.menuMainText} style={{fontSize:'1rem'}}>
                 {' '}
                 <Link
                    sx={{
@@ -46,7 +46,7 @@ const Menu = () => {
         </Grid>
         <Grid item>
         <List sx={commonBorderColor}>
-              <Typography variant="h6" className={classes.menuMainText}>
+              <Typography variant="h6" className={classes.menuMainText} style={{fontSize:'1rem'}}>
                 {' '}
               <Link
                 id="btn__zuri"
@@ -67,7 +67,7 @@ const Menu = () => {
         </Grid>
         <Grid item>
             <List sx={commonBorderColor}>
-              <Typography variant="h6" className={classes.menuMainText}>
+              <Typography variant="h6" className={classes.menuMainText} style={{fontSize:'1rem'}}>
                 {' '}
               <Link
                 id="books"
@@ -88,7 +88,7 @@ const Menu = () => {
         </Grid>
         <Grid item>
             <List sx={commonBorderColor}>
-              <Typography variant="h6" className={classes.menuMainText}>
+              <Typography variant="h6" className={classes.menuMainText} style={{fontSize:'1rem'}}>
                 {' '}
               <Link
                 id="book__python"
@@ -109,7 +109,7 @@ const Menu = () => {
         </Grid>
         <Grid item>
             <List sx={commonBorderColor}>
-              <Typography variant="h6" className={classes.menuMainText}>
+              <Typography variant="h6" className={classes.menuMainText} style={{fontSize:'1rem'}}>
                 {' '}
               <Link
                 id="pitch"
@@ -130,7 +130,7 @@ const Menu = () => {
         </Grid>
         <Grid item>
             <List sx={commonBorderColor}>
-              <Typography variant="h6" className={classes.menuMainText}>
+              <Typography variant="h6" className={classes.menuMainText} style={{fontSize:'1rem'}}>
                 {' '}
               <Link
                 id="book__design"

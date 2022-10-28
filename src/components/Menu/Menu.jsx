@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography, List, Box, Grid, Link } from '@mui/material';
+import { Typography, List, Grid, Link } from '@mui/material';
 
 //styling
 import { commonStyles, commonBorderColor } from './styles';
@@ -23,139 +23,134 @@ const Menu = () => {
         justify="center"
       >
         <Grid item>
-          <Box
-            sx={{
-              ...commonStyles,
-            }}
-          >
             <List sx={commonBorderColor}>
               <Typography variant="h6" className={classes.menuMainText}>
                 {' '}
                 <Link
+                   sx={{
+                    ...commonStyles,
+                  }}
+                  id="twitter"
                   style={{
                     textDecoration: 'none',
                     cursor: 'pointer',
                     color: 'black',
                   }}
+                  href="https://twitter.com/techy_ayo"
+
                 >
                   Twitter Link
                 </Link>{' '}
               </Typography>
             </List>
-          </Box>
         </Grid>
         <Grid item>
-          <Box
-            sx={{
-              ...commonStyles,
-            }}
-          >
-            <List sx={commonBorderColor}>
+        <List sx={commonBorderColor}>
               <Typography variant="h6" className={classes.menuMainText}>
                 {' '}
-                <Link
+              <Link
+                id="btn__zuri"
+                  sx={{
+                    ...commonStyles,
+                  }}
                   style={{
                     textDecoration: 'none',
                     cursor: 'pointer',
                     color: 'black',
                   }}
+                  href="https://training.zuri.team/"
                 >
                   Zuri Team
                 </Link>{' '}
               </Typography>
             </List>
-          </Box>
         </Grid>
         <Grid item>
-          <Box
-            sx={{
-              ...commonStyles,
-            }}
-          >
             <List sx={commonBorderColor}>
               <Typography variant="h6" className={classes.menuMainText}>
                 {' '}
-                <Link
+              <Link
+                id="books"
+                  sx={{
+                    ...commonStyles,
+                  }}
                   style={{
                     textDecoration: 'none',
                     cursor: 'pointer',
                     color: 'black',
                   }}
+                href="http://books.zuri.team"
                 >
                   Zuri Books
                 </Link>{' '}
               </Typography>
             </List>
-          </Box>
         </Grid>
         <Grid item>
-          <Box
-            sx={{
-              ...commonStyles,
-            }}
-          >
             <List sx={commonBorderColor}>
               <Typography variant="h6" className={classes.menuMainText}>
                 {' '}
-                <Link
+              <Link
+                id="book__python"
+                  sx={{
+                    ...commonStyles,
+                  }}
                   style={{
                     textDecoration: 'none',
                     cursor: 'pointer',
                     color: 'black',
                   }}
+                href="https://books.zuri.team/python-for-beginners?ref_id=lazyProgrammer"
                 >
                   Python Books
                 </Link>{' '}
               </Typography>
             </List>
-          </Box>
         </Grid>
         <Grid item>
-          <Box
-            sx={{
-              ...commonStyles,
-            }}
-          >
             <List sx={commonBorderColor}>
               <Typography variant="h6" className={classes.menuMainText}>
                 {' '}
-                <Link
+              <Link
+                id="pitch"
+                  sx={{
+                    ...commonStyles,
+                  }}
                   style={{
                     textDecoration: 'none',
                     cursor: 'pointer',
                     color: 'black',
                   }}
+                href="https://backgroundcheck.zuri.team"
                 >
                   Background Check for Coders
                 </Link>{' '}
               </Typography>
             </List>
-          </Box>
         </Grid>
         <Grid item>
-          <Box
-            sx={{
-              ...commonStyles,
-            }}
-          >
             <List sx={commonBorderColor}>
               <Typography variant="h6" className={classes.menuMainText}>
                 {' '}
-                <Link
+              <Link
+                id="book__design"
+                  sx={{
+                    ...commonStyles,
+                  }}
                   style={{
                     textDecoration: 'none',
                     cursor: 'pointer',
                     color: 'black',
                   }}
+                href="https://books.zuri.team/design-rules"
                 >
                   Design Book
                 </Link>{' '}
               </Typography>
             </List>
-          </Box>
         </Grid>
 
-        <Grid item spacing={3} style={{ marginBottom: '50px' }}>
+        <Grid item  style={{ marginBottom: '50px' }}>
           <Typography className={classes.icon} variant="h4">
             <img className={classes.image} src={slack} alt="slack" />
             <GitHubIcon

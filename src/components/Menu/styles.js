@@ -47,7 +47,7 @@ export const commonStyles = {
   alignItems: 'center',
   //   padding: '24px 32px',
   gap: '8px',
-  backgroundColor: '#EAECF0',
+  // backgroundColor: '#EAECF0',
   // width:'100%',
   // elevation: 10,
   borderRadius: '8px',

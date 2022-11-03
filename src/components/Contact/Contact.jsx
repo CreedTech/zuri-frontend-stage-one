@@ -68,7 +68,7 @@ const Contact = () => {
                   mind.
                 </Typography>
               </Grid>
-              <form sx={{ borderRadius: '20px' }}>
+              <form sx={{ borderRadius: '8px!important' }}>
                 <Grid container spacing={4}>
                   <Grid xs={12} sm={6} item>
                     <InputLabel shrink htmlFor="first_name">

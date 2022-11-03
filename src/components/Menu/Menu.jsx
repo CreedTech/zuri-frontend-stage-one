@@ -172,6 +172,31 @@ const Menu = () => {
             </Typography>
           </List>
         </Grid>
+        <Grid item>
+          <List sx={commonBorderColor}>
+            <Typography
+              variant="h6"
+              className={classes.menuMainText}
+              style={{ fontSize: '1rem' }}
+            >
+              {' '}
+              <Link
+                id="book__design"
+                sx={{
+                  ...commonStyles,
+                }}
+                style={{
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  color: 'black',
+                }}
+                href="https://books.zuri.team/design-rules"
+              >
+                Contact Me
+              </Link>{' '}
+            </Typography>
+          </List>
+        </Grid>
 
         <Grid item style={{ marginBottom: '50px' }}>
           <Typography className={classes.icon} variant="h4">

@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuMainText: {
     color: 'black',
-    fontSize:'2rem'
+    fontSize: '2rem',
   },
   image: {
     width: '19px',
@@ -24,33 +24,22 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: '12px 0px',
     gap: '32px',
-
-    // width: '1216px',
     height: '72px',
-
     background: '#FFFFFF',
-
     flex: 'none',
     order: '1',
-    // alignSelf: 'stretch',
-    // flexGrow: '0',
   },
 }));
 
 export default useStyles;
 
 export const commonStyles = {
-  // border: 3,
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  //   padding: '24px 32px',
   gap: '8px',
-  // backgroundColor: '#EAECF0',
-  // width:'100%',
-  // elevation: 10,
   borderRadius: '8px',
   flex: 'none',
   order: '0',

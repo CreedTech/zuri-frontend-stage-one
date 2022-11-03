@@ -75,9 +75,6 @@ const Header = () => {
           <Typography
             className={classes.headerTitle}
             id="slack"
-            // style={{
-            //   display: 'none',
-            // }}
             variant="h3"
             hidden
           >
@@ -98,7 +95,6 @@ const Header = () => {
                 }}
               />
             </picture>
-            {/* <img src={default_dot} alt="dot" /> */}
           </BootstrapTooltip>
         </div>
       </Grid>

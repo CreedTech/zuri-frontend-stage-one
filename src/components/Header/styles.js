@@ -13,8 +13,6 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     '&:hover': {
       filter: 'contrast(50%)',
-      // opacity: '0.5',
-      // backgroundColor:'gray',
     },
   },
   headerTitle: {
@@ -34,8 +32,6 @@ const useStyles = makeStyles((theme) => ({
     top: '0',
     bottom: '40',
     right: '15%',
-    // border: '1px dotted lightgray',
-    // borderRadius:'50%',
   },
 }));
 

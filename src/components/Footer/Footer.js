@@ -29,7 +29,6 @@ const Footer = () => {
 
 const useStyles = makeStyles({
   footer: {
-    //   width: "100%",
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -47,7 +46,6 @@ const useStyles = makeStyles({
     },
   },
   footerDivider: {
-    //   width: "100%",
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',

@@ -3,7 +3,7 @@ import React from 'react';
 import { Typography, List, Grid, Link } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Header, Footer } from '..';
+import { Header } from '..';
 import theme from '../../assets/css/theme';
 
 //styling
@@ -194,7 +194,7 @@ const Menu = () => {
             >
               {' '}
               <Link
-                id="book__design"
+                id="contact"
                 sx={{
                   ...commonStyles,
                 }}
@@ -222,7 +222,6 @@ const Menu = () => {
           </Typography>
         </Grid>
         </Grid>
-        <Footer />
       </ThemeProvider>
     </div>
   );

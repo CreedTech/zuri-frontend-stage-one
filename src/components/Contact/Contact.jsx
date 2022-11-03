@@ -27,7 +27,7 @@ const validate = (data) => {
   }
 
   if (!data.last_name) {
-    errors.last_name = 'Please Enter last_name';
+    errors.last_name = 'Please Enter last name';
   }
 
   if (!data.email) {
@@ -36,7 +36,7 @@ const validate = (data) => {
     errors.email = 'Invalid email address';
   }
   if (!data.message) {
-    errors.message = 'Please Enter message';
+    errors.message = 'Please Enter a message';
   }
 
   return errors;

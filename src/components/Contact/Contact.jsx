@@ -11,6 +11,7 @@ import {
   FormControlLabel,
   Checkbox,
 } from '@mui/material';
+import { useFormik } from 'formik';
 
 //styling
 import { ThemeProvider } from '@mui/material/styles';
@@ -18,7 +19,42 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { makeStyles } from '@mui/styles';
 import theme from '../../assets/css/theme';
 
+const validate = (data) => {
+  const errors = {};
+
+  if (!data.first_name) {
+    errors.first_name = 'Please Enter first Name';
+  }
+
+  if (!data.last_name) {
+    errors.last_name = 'Please Enter last_name';
+  }
+
+  if (!data.email) {
+    errors.email = 'Please Enter email';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
+    errors.email = 'Invalid email address';
+  }
+  if (!data.message) {
+    errors.message = 'Please Enter message';
+  }
+
+  return errors;
+};
+
 const Contact = () => {
+  const formik = useFormik({
+    initialValues: {
+      first_name: '',
+      last_name: '',
+      email: '',
+      message: '',
+    },
+    validate: validate,
+    onSubmit: (values) => {
+      alert('Subimtted Successfully');
+    },
+  });
   const classes = useStyles();
   const name = 'Lazy';
 
@@ -68,29 +104,42 @@ const Contact = () => {
                   mind.
                 </Typography>
               </Grid>
-              <form sx={{ borderRadius: '8px!important' }}>
+              <form
+                onSubmit={formik.handleSubmit}
+                sx={{ borderRadius: '8px!important' }}
+              >
                 <Grid container spacing={4}>
                   <Grid xs={12} sm={6} item>
                     <InputLabel shrink htmlFor="first_name">
                       First Name
                     </InputLabel>
                     <TextField
+                      value={formik.values.first_name}
                       placeholder="Enter your first name"
                       id="first_name"
+                      onChange={formik.handleChange}
+                      // error={text === ''}
+                      // helperText={text === '' ? 'Empty!' : ''}
                       variant="outlined"
                       sx={{
                         '& .css-bx38nh-MuiInputBase-root-MuiOutlinedInput-root':
                           { borderRadius: '8px!important' },
                       }}
                       fullWidth
-                      required
                     />
+                    {formik.touched.first_name && formik.errors.first_name ? (
+                      <span style={{ color: 'red' }}>
+                        {formik.errors.first_name}
+                      </span>
+                    ) : null}
                   </Grid>
                   <Grid xs={12} sm={6} item>
                     <InputLabel shrink htmlFor="last_name">
                       Last Name
                     </InputLabel>
                     <TextField
+                      value={formik.values.last_name}
+                      onChange={formik.handleChange}
                       placeholder="Enter your last name"
                       id="last_name"
                       variant="outlined"
@@ -99,14 +148,20 @@ const Contact = () => {
                           { borderRadius: '8px!important' },
                       }}
                       fullWidth
-                      required
                     />
+                    {formik.touched.last_name && formik.errors.last_name ? (
+                      <span style={{ color: 'red' }}>
+                        {formik.errors.last_name}
+                      </span>
+                    ) : null}
                   </Grid>
                   <Grid item xs={12}>
                     <InputLabel shrink htmlFor="email">
                       Email
                     </InputLabel>
                     <TextField
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
                       type="email"
                       placeholder="yourname@email.com"
                       id="email"
@@ -116,14 +171,20 @@ const Contact = () => {
                           { borderRadius: '8px!important' },
                       }}
                       fullWidth
-                      required
                     />
+                    {formik.touched.email && formik.errors.email ? (
+                      <span style={{ color: 'red' }}>
+                        {formik.errors.email}
+                      </span>
+                    ) : null}
                   </Grid>
                   <Grid item xs={12}>
                     <InputLabel shrink htmlFor="message">
                       Message
                     </InputLabel>
                     <TextField
+                      value={formik.values.message}
+                      onChange={formik.handleChange}
                       multiline
                       rows={4}
                       id="message"
@@ -134,8 +195,12 @@ const Contact = () => {
                           { borderRadius: '8px!important' },
                       }}
                       fullWidth
-                      required
                     />
+                    {formik.touched.message && formik.errors.message ? (
+                      <span style={{ color: 'red' }}>
+                        {formik.errors.message}
+                      </span>
+                    ) : null}
                   </Grid>
                   <Grid item xs={12}>
                     <FormControlLabel

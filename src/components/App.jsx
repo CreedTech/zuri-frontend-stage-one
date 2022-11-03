@@ -1,24 +1,20 @@
 import React from 'react';
 
 //mui components
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { Route, Routes } from 'react-router-dom';
 
-import theme from '../assets/css/theme';
-import { Header, Menu, Footer } from '.';
+import {Menu, Contact } from '.';
 
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
 
-        <Header />
+        <Routes>
+          <Route exact path="/" element={<Menu />} />
+          <Route exact path="/contact" element={<Contact />} />
+        </Routes>
 
-        <Menu />
-
-        <Footer />
-      </ThemeProvider>
+        {/* <Menu /> */}
     </div>
   );
 }

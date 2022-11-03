@@ -1,6 +1,10 @@
 import React from 'react';
 
 import { Typography, List, Grid, Link } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Header, Footer } from '..';
+import theme from '../../assets/css/theme';
 
 //styling
 import { commonStyles, commonBorderColor } from './styles';
@@ -15,6 +19,15 @@ const Menu = () => {
 
   return (
     <div>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+
+        <Header />
+        
+
+        {/* <Menu /> */}
+
+       
       <Grid
         container
         spacing={3}
@@ -190,7 +203,7 @@ const Menu = () => {
                   cursor: 'pointer',
                   color: 'black',
                 }}
-                href="https://books.zuri.team/design-rules"
+                href="/contact"
               >
                 Contact Me
               </Link>{' '}
@@ -208,7 +221,9 @@ const Menu = () => {
             />
           </Typography>
         </Grid>
-      </Grid>
+        </Grid>
+        <Footer />
+      </ThemeProvider>
     </div>
   );
 };
